@@ -10,7 +10,6 @@ import "./App.css";
 import {Route, Link, Redirect} from 'react-router-dom';
 
 
-const API_KEY = "c40a9f3979dc415c9bedb13f41fb1449"
 
 class App extends Component {
 constructor(){
@@ -23,7 +22,7 @@ constructor(){
 componentDidMount(){
   console.log('mounted')
   let url = "https://bombrecipeapi.herokuapp.com/"
-   axios.get(url, {headers:{'X-RapidAPI-Key': API_KEY}})
+   axios.get(url)
     .then(res => {
       return res
     })

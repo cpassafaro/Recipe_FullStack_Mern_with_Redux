@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Button, Typography } from "@material-ui/core";
-import Theme from './Theme';
+import { Button, Typography, Container, TextField } from "@material-ui/core";
+
 
 export default class Update extends Component {
   constructor(props) {
@@ -70,33 +70,40 @@ export default class Update extends Component {
     this.setState({ instructions: empty });
   };
 
+  
+
   render() {
     return (
-      <div>
-        <Typography>
-          <input
+      <Container>
+        <Typography style={{color:'secondary', display: 'flex', flexDirection:'column'}}>
+          <TextField 
             type="text"
-            placeholder="title"
+            placeholder="Recipe Name"
+            variant="outlined"
             onChange={this.pushTitleToState}
           />
-          <input
+          <TextField
             type="text"
-            placeholder="summary"
+            placeholder="Summary"
+            variant="outlined"
             onChange={this.pushSummaryToState}
           />
-          <input
+          <TextField
             type="text"
-            placeholder="summary"
+            placeholder="Style"
+            variant="outlined"
             onChange={this.pushCuisinesToState}
           />
-          <input
+          <TextField
             type="text"
-            placeholder="summary"
+            variant="outlined"
+            placeholder="Ingredients"
             onChange={this.pushIngredientsToState}
           />
-          <input
+          <TextField
             type="text"
-            placeholder="summary"
+            placeholder="Instructions"
+            variant="outlined"
             onChange={this.pushInstructionsToState}
           />
         </Typography>
@@ -108,7 +115,7 @@ export default class Update extends Component {
         >
           Submit
         </Button>
-      </div>
+      </Container>
     );
   }
 }
