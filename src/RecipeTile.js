@@ -33,9 +33,11 @@ class RecipeTile extends Component{
             })
             //gets the instructions step by step
             instructions.forEach(element => {
+                if(element != null){
                 let thing = <div>{element.step}</div>
                 steps.push(thing)
                 return steps
+                }
             })
             
             let element1 =(
@@ -47,7 +49,6 @@ class RecipeTile extends Component{
                         <div>Number of Servings: {item.servings}</div>
                         <div>Steps: {steps}</div>
                     </div>
-                    <img src={item.image}/>
                 </div>
             )
             emptyArr.push(element1)

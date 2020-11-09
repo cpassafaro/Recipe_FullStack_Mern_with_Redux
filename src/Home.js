@@ -12,7 +12,7 @@ export default class Home extends Component {
     super(props);
     this.state = {
       data: props.data.data,
-      american: "",
+      nordic: "",
       french: "",
       italian: "",
       spanish: "",
@@ -60,7 +60,7 @@ export default class Home extends Component {
     let mexican = [];
     let middleEastern = [];
     arr.map((item) => {
-      if (item.cuisines.includes("American")) {
+      if (item.cuisines.includes("Nordic")) {
         holder.push(item);
       } else if (item.cuisines.includes("French")) {
         french.push(item);
@@ -138,7 +138,7 @@ export default class Home extends Component {
       middleEastern
     );
     this.setState({
-      american: holder,
+      nordic: holder,
       french: french,
       italian: italian,
       spanish: spanish,
@@ -166,7 +166,7 @@ export default class Home extends Component {
       return (
         <Typography>
           <Grid container direction="row" justify="space-around">
-            <Card title="American Cuisine" image={this.state.american[0].image} data={this.state.american}
+            <Card title="Nordic Cuisine" image={this.state.nordic[0].image} data={this.state.nordic}
             />
             <Card title="French Cuisine" image={this.state.french[0].image} data={this.state.french}/>
             <Card title="Italian Cuisine" image={this.state.italian[0].image} data={this.state.italian}/>
