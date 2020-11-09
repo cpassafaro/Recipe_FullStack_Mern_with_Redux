@@ -6,8 +6,8 @@ _______________________
 https://cpassafaro.github.io/
 
 ## Sample 
-
-![Home page](./images/Screen Shot 2020-11-09 at 4.26.55 PM.png)
+***
+![Home page](./images/screen.png)
 
 ## Descriptions
 _________________
