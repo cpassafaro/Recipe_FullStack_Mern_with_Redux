@@ -7,7 +7,7 @@ https://cpassafaro.github.io/
 
 ## Sample 
 
-/Users/christinapassafaro/Desktop/sei/projects/front_end_of_json_api_project/images/Screen Shot 2020-11-09 at 4.26.55 PM.png
+![Home page](./images/Screen Shot 2020-11-09 at 4.26.55 PM.png)
 
 ## Descriptions
 _________________
