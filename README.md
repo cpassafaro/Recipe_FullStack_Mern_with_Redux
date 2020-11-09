@@ -3,7 +3,7 @@ _______________________
 
 ## Deployed URL
 
-https://cpassafaro.github.io/
+https://cpassafaro.github.io/front_end_of_json_api_project/build/index.html
 
 ## Sample 
 ***
