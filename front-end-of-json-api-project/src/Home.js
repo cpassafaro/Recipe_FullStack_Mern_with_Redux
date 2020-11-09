@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import {
   Typography,
-  Button,
-  CardMedia,
-  CardContent,
-  CardActions,
-  CardActionArea,
   Grid,
 } from "@material-ui/core/";
 import Card from "./CardPage";
@@ -123,25 +118,25 @@ export default class Home extends Component {
         middleEastern
       );
     });
-    // console.log(
-    //   holder,
-    //   french,
-    //   italian,
-    //   spanish,
-    //   thai,
-    //   korean,
-    //   indian,
-    //   jewish,
-    //   southern,
-    //   african,
-    //   cajun,
-    //   chinese,
-    //   caribbean,
-    //   german,
-    //   japanese,
-    //   mexican,
-    //   middleEastern
-    // );
+    console.log(
+      holder,
+      french,
+      italian,
+      spanish,
+      thai,
+      korean,
+      indian,
+      jewish,
+      southern,
+      african,
+      cajun,
+      chinese,
+      caribbean,
+      german,
+      japanese,
+      mexican,
+      middleEastern
+    );
     this.setState({
       american: holder,
       french: french,
@@ -193,7 +188,7 @@ export default class Home extends Component {
           </Grid>
           <Grid container direction="row" justify="space-around">
             <Card title="Caribbean Cuisine" image={this.state.caribbean[0].image} data={this.state.caribbean}/>
-            <Card title="German Cuisine" image={this.state.german[0].image} data={this.state.german}/>
+            <Card title="German Cuisine" image={this.state.german[1].image} data={this.state.german}/>
             <Card title="Irish Cuisine" image={this.state.irish[0].image} data={this.state.irish}/>
           </Grid>
           <Grid container direction="row" justify="space-around">

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "./Header";
 import { Button, Typography, Container, TextField } from "@material-ui/core";
 import axios from "axios";
 
@@ -30,11 +29,13 @@ class CreateRecipe extends Component {
     axios
       .post(`https://bombrecipeapi.herokuapp.com/new`, recipe)
       .then((res) => {
-        if(res.status == 200){
+        if(res.data != null){
           console.log(this.props.history)
           this.props.history.push('/success')
           // <alert>horray</alert>
         console.log(res.data);
+        }else if(res.data == null){
+          this.props.history.push('/fail')
         }else{
           this.props.history.push('/fail')
         }

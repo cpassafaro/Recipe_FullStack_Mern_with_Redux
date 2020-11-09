@@ -33,11 +33,13 @@ export default class Update extends Component {
         recipe
       )
       .then((res) => {
-        if(res.status == 200){
+        if(res.data != null){
           console.log(this.props.history)
           this.props.history.push('/success')
           // <alert>horray</alert>
         console.log(res.data);
+        }else if(res.data == null){
+          this.props.history.push('/fail')
         }else{
           this.props.history.push('/fail')
         }

@@ -25,11 +25,13 @@ class RecipeTile extends Component{
             let ingredients =[]
             let instructions = item.instructions[0].steps;
             let steps =[]
+
             item.ingredients.forEach(element => {
                 let thing = <div>{element.original}</div>
                 ingredients.push(thing)
                 return ingredients
             })
+            //gets the instructions step by step
             instructions.forEach(element => {
                 let thing = <div>{element.step}</div>
                 steps.push(thing)
@@ -38,8 +40,9 @@ class RecipeTile extends Component{
             
             let element1 =(
                 <div className ={`container`}>
+                    <div>{item.title}</div>
+                    <img src={item.image}/>
                     <div className ='information'>
-                        <div>{item.title}</div>
                         <div>Ingredients: {ingredients}</div>
                         <div>Number of Servings: {item.servings}</div>
                         <div>Steps: {steps}</div>
@@ -52,17 +55,6 @@ class RecipeTile extends Component{
         this.setState({ elements: emptyArr })
     }
 
-    // getIngredient = () => {
-    //     let ingredients =[]
-    //     let dataInterior = this.state.data
-    //     dataInterior.forEach(item => {
-    //         item.ingredients.forEach(element => {
-    //             let thing = element.original
-    //             ingredients.push(thing)
-    //         })
-    //         console.log(ingredients)
-    //     })
-    // }
 
     render(){
         console.log(this.state.data)

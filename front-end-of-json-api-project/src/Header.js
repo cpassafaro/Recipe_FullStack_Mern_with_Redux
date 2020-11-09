@@ -1,13 +1,11 @@
-import { render } from "@testing-library/react";
-import React, { Component } from "react";
+import React from "react";
 import "./Header.css";
 import {
   AppBar,
   Toolbar,
   Typography,
   IconButton,
-  Button,
-  Container
+  Button
 } from "@material-ui/core/";
 import { Route, Link, Redirect } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
