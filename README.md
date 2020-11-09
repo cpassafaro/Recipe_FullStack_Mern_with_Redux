@@ -7,7 +7,7 @@ https://cpassafaro.github.io/
 
 ## Sample 
 ***
-![Home page](./images/screen.png)
+![Home page](images/screen.png)
 
 ## Descriptions
 _________________
