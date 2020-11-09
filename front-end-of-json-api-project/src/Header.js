@@ -27,7 +27,7 @@ const useSytles = makeStyles({
     color: 'white'
   },
   container: {
-    width:'300px'
+    maxWidth:'300px'
   }
 });
 

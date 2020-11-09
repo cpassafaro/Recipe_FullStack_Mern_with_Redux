@@ -72,6 +72,7 @@ class CreateRecipe extends Component {
     return (
       <Container>
         <Typography style={{color:'secondary', display:'flex', flexDirection:'column'}}>
+          <div>Create your new recipe below</div>
           <TextField
             type="text"
             variant="outlined"

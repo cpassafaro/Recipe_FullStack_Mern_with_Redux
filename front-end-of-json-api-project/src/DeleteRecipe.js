@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Success from './Success'
 import { Button, Typography, Container, TextField } from "@material-ui/core";
+import { Route, Link, Redirect } from "react-router-dom";
+
 
 export default class DeleteRecipe extends Component {
   constructor(props) {
@@ -18,7 +21,11 @@ export default class DeleteRecipe extends Component {
     axios
       .delete(`https://bombrecipeapi.herokuapp.com/remove/${this.state.title}`)
       .then((res) => {
+        if(res.status == 200){
+          // res.render(<Link to='/success'></Link>)
+          
         console.log(res.data);
+        }
       });
   };
 
@@ -34,11 +41,10 @@ export default class DeleteRecipe extends Component {
   };
 
   render() {
-    console.log(this.state.data);
-    console.log(this.state.title);
     return (
       <Container>
         <Typography style={{display:'flex', flexDirection:'column'}}>
+          <div>Place name of recipe you would like to delete below</div>
           <TextField
             variant="outlined"
             type="text"

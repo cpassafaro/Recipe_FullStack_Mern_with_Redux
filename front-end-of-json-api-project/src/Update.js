@@ -76,6 +76,7 @@ export default class Update extends Component {
     return (
       <Container>
         <Typography style={{color:'secondary', display: 'flex', flexDirection:'column'}}>
+          <div>Place the name of the recipe you would like to change below in 'Recipe Name' box and then make changes below.</div>
           <TextField 
             type="text"
             placeholder="Recipe Name"
