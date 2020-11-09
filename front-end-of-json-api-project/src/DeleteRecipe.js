@@ -21,10 +21,16 @@ export default class DeleteRecipe extends Component {
     axios
       .delete(`https://bombrecipeapi.herokuapp.com/remove/${this.state.title}`)
       .then((res) => {
-        if(res.status == 200){
-          // res.render(<Link to='/success'></Link>)
-          
+        //could do it by status because even if title doesn't exist but api call is good it would show success
+        if(res.data != null){
+          console.log(this.props.history)
+          this.props.history.push('/success')
+          // <alert>horray</alert>
         console.log(res.data);
+        }else if(res.data == null){
+          this.props.history.push('/fail')
+        }else{
+          this.props.history.push('/fail')
         }
       });
   };

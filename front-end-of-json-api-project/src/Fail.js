@@ -17,7 +17,7 @@ export default function SimpleAlerts() {
   return (
     <div className={classes.root}>
       <Alert variant="filled" severity="error">
-        This is an error alert — check it out!
+        Error! The title you entered was not found, please type in the title exactly as you see it!
       </Alert>
     </div>
   );
