@@ -17,15 +17,19 @@ const useSytles = makeStyles({
     color: "white",
     display: "flex",
     justifyContent: "space-around",
+    textDecoration:'underline',
+    // border:'none'
   },
   recipesStyle: {
     display: "flex",
     justifyContent: "flex-start",
     width: '300px',
-    color: 'white'
+    color: 'white',
+    textDecoration:'underline'
   },
   container: {
-    maxWidth:'300px'
+    maxWidth:'300px',
+    textDecoration:'none'
   }
 });
 

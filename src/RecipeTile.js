@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './RecipeTile.css'
 
 
 
@@ -42,12 +42,17 @@ class RecipeTile extends Component{
             
             let element1 =(
                 <div className ={`container`}>
-                    <div>{item.title}</div>
-                    <img src={item.image}/>
+                    <div className='title'>{item.title}</div>
+                    <div className='img-area'>
+                        <img src={item.image} className='image' maxWidth='200px'/>
+                        <div className='ingredients-area'>
+                            <div>Number of Servings: {item.servings}</div>
+                            <div>Ingredients: {ingredients}</div>
+                        </div>
+                    </div>
                     <div className ='information'>
-                        <div>Ingredients: {ingredients}</div>
-                        <div>Number of Servings: {item.servings}</div>
-                        <div>Steps: {steps}</div>
+                        <div className='steps-title'>---Steps---</div>
+                        <div>{steps}</div>
                     </div>
                 </div>
             )

@@ -56,6 +56,7 @@ class App extends Component {
           </nav>
           <main>
             <Header />
+            {/* <Home data={this.state.data}/> */}
             <Route
               exact
               path="/"
@@ -83,12 +84,6 @@ class App extends Component {
               path="/success" component={Success}/>
               <Route path="/fail" component={Fail}/>
           </main>
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-            crossorigin="anonymous"
-          ></link>
         </div>
       );
     }
