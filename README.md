@@ -3,7 +3,10 @@ _______________________
 
 ## Deployed URL
 
+This page deploys to the build page, not the home page. To get to home page click Recipes once pages loads!
+
 https://cpassafaro.github.io/front_end_of_json_api_project/build/index.html
+
 
 ## Sample 
 ***
