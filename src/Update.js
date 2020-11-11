@@ -23,9 +23,29 @@ export default class Update extends Component {
       title: this.state.title,
       summary: this.state.summary,
       cuisines: this.state.cuisines,
-      ingredients: this.state.ingredients,
-      instructions: this.state.instructions,
-    };
+      ingredients: {
+        aisle: "Produce",
+        amount: 1,
+        consistency: "solid",
+        id: 9037,
+        image: "avocado.jpg",
+        measures: {},
+        meta: [],
+        metaInformation: [],
+        name: "avocado",
+        original: this.state.ingredients,
+        originalName: "large avocado",
+        originalString: "1 medium/large avocado",
+        unit: "medium"
+        },
+      instructions: {
+        name: '',
+        steps: [{
+          number:1,
+          step:[this.state.instructions]
+        }]
+    }
+  }
 
     axios
       .put(
