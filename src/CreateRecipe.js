@@ -12,6 +12,7 @@ class CreateRecipe extends Component {
       cuisines: [],
       ingredients: [],
       instructions: [],
+      servings: Number,
     };
   }
   // app.post("/new", recipeController.create);
@@ -22,6 +23,7 @@ class CreateRecipe extends Component {
     const recipe = {
       title: this.state.title,
       summary: this.state.summary,
+      servings: this.state.servings,
       cuisines: this.state.cuisines,
       ingredients: {
         aisle: "Produce",
@@ -80,6 +82,11 @@ class CreateRecipe extends Component {
     empty.push(element);
     this.setState({ cuisines: empty });
   };
+  pushServingsToState = (e) => {
+    let element = e.target.value;
+   
+    this.setState({ servings: element });
+  };
 
   pushIngredientsToState = (e) => {
     let element = e.target.value;
@@ -115,8 +122,14 @@ class CreateRecipe extends Component {
           <TextField
             variant="outlined"
             type="text"
-            placeholder="Style"
+            placeholder="Style of Cuisine must be one of the title names from homepage ex. Mexican or Thai"
             onChange={this.pushCuisinesToState}
+          />
+          <TextField
+            variant="outlined"
+            type="text"
+            placeholder="Servings"
+            onChange={this.pushServingsToState}
           />
           <TextField
             variant="outlined"

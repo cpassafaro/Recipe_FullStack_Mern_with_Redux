@@ -10,7 +10,6 @@ export default class Update extends Component {
     this.state = {
       title: "",
       summary: "",
-      cuisines: [],
       ingredients: [],
       instructions: [],
     };
@@ -22,7 +21,6 @@ export default class Update extends Component {
     const recipe = {
       title: this.state.title,
       summary: this.state.summary,
-      cuisines: this.state.cuisines,
       ingredients: {
         aisle: "Produce",
         amount: 1,
@@ -78,13 +76,6 @@ export default class Update extends Component {
     this.setState({ summary: element });
   };
 
-  pushCuisinesToState = (e) => {
-    let element = e.target.value;
-    let empty = [];
-    empty.push(element);
-    this.setState({ cuisines: empty });
-  };
-
   pushIngredientsToState = (e) => {
     let element = e.target.value;
     let empty = [];
@@ -108,7 +99,7 @@ export default class Update extends Component {
           <div>Place the name of the recipe you would like to change below in 'Recipe Name' box and then make changes below.</div>
           <TextField 
             type="text"
-            placeholder="Recipe Name"
+            placeholder="Recipe Name You Would Like to Change"
             variant="outlined"
             onChange={this.pushTitleToState}
           />
@@ -117,12 +108,6 @@ export default class Update extends Component {
             placeholder="Summary"
             variant="outlined"
             onChange={this.pushSummaryToState}
-          />
-          <TextField
-            type="text"
-            placeholder="Style"
-            variant="outlined"
-            onChange={this.pushCuisinesToState}
           />
           <TextField
             type="text"
