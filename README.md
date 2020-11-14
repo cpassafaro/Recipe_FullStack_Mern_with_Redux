@@ -25,6 +25,7 @@ __Date__|__Progress__|__To Do__|
 11/7/2020 | Adding Create, update and delete functionality to change information in the database | Add display components for read home page|
 11/8/2020 | Imported material UI components for styling on some pages | Stylize more |
 11/9/2020 | Improved CRUD functionality via QA and added styling for displayed components on homepage. Added page for successful and unsuccessful CRUD changes. Added page for recipe detailed information via genra| details page needs more styling|
+11/14/2020 | Updated CRUD Functinality so that the options are directly below the recipe elements. Made user experience easier| need to continue working on how elements are shown after they have been update. Potentially could change a value of all elements that have been edited and I could set an if else statement to recognize and filter that way. Or could change how db is seeded on backend project.
 
 __API Used__
 ____________
