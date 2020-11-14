@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import axios from 'axios';
+import { Route, Link, Redirect } from "react-router-dom";
 import "./RecipeTile.css";
 
 class RecipeTile extends Component {
@@ -13,9 +15,7 @@ class RecipeTile extends Component {
     };
   }
   componentDidMount() {
-    // this.getIngredient()
     this.createElements();
-    // this.createAddedElements();
   }
   createElements = () => {
     let dataInterior = this.state.data;
@@ -68,6 +68,7 @@ class RecipeTile extends Component {
             <div className="steps-title">---Steps---</div>
             <div>{steps}</div>
           </div>
+          <button className='delete button' onClick={this.deleteElement}>Delete Recipe</button>
         </div>
       );
       emptyArr.push(element1);
@@ -75,6 +76,26 @@ class RecipeTile extends Component {
     });
     this.setState({ elements: emptyArr });
   };
+
+  deleteElement = (e) => {
+    let title = e.target.parentElement.firstElementChild.textContent
+
+    axios
+    .delete(`https://bombrecipeapi.herokuapp.com/remove/${title}`)
+    .then((res) => {
+      //could do it by status because even if title doesn't exist but api call is good it would show success
+      if(res.data != null){
+        console.log(this.props.history)
+        this.props.history.push('/success')
+        window.location.reload(false)
+      console.log(res.data);
+      }else if(res.data == null){
+        this.props.history.push('/fail')
+      }else{
+        this.props.history.push('/fail')
+      }
+    });
+  }
 
 
 
