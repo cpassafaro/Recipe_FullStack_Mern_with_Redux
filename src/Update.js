@@ -120,8 +120,6 @@ export default class Update extends Component {
   
 
   render() {
-    console.log(this.state.title)
-    console.log(this.state.servings)
 
     if (this.state.isLoading == true) {
       return (
