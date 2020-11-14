@@ -47,12 +47,6 @@ export default function Header() {
             </Typography>
           </Link>
         </div>
-        <Link to="/update">
-          <Button className={classes.buttonStyle}>Update Recipe</Button>
-        </Link>
-        <Link to="/delete">
-          <Button className={classes.buttonStyle}>Delete Recipe</Button>
-        </Link>
         <Link to="/new">
           <Button className={classes.buttonStyle}>Create Recipe</Button>
         </Link>

@@ -44,7 +44,6 @@ class App extends Component {
           alignItems="center"
         />
       );
-      // <div className="App">Loading...</div>;
     } else {
       return (
         <div>
@@ -75,7 +74,7 @@ class App extends Component {
             <Route
               path="/update"
               render={(routerProps) => {
-                return <Update {...routerProps} data={this.state.data} />;
+                return <Update {...routerProps} />;
               }}
             />
             <Route

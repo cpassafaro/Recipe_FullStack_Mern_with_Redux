@@ -33,7 +33,7 @@ class CardPage extends Component{
   render(){
     const {classes} = this.props
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={{maxWidth:"228px"}}>
       <CardActionArea>
         <CardMedia
           className={classes.media}

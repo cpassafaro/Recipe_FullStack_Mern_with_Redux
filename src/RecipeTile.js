@@ -68,7 +68,17 @@ class RecipeTile extends Component {
             <div className="steps-title">---Steps---</div>
             <div>{steps}</div>
           </div>
-          <button className='delete button' onClick={this.deleteElement}>Delete Recipe</button>
+          <div>
+            <button className='button' onClick={this.deleteElement}>Delete Recipe</button>
+            <Link to={{
+              pathname: '/update',
+              params:{
+                data:item
+              }
+            }}>
+              <button className='button'>Edit Recipe</button>
+            </Link>
+          </div>
         </div>
       );
       emptyArr.push(element1);
