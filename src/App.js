@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import CreateRecipe from "./CreateRecipe";
 import Header from "./Header";
-import DeleteRecipe from "./DeleteRecipe";
 import Update from "./Update";
 import Home from "./Home";
 import RecipeTile from './RecipeTile';
@@ -65,12 +64,6 @@ class App extends Component {
             />
             {/* Route to make a new element, component will pass down props automatically */}
             <Route path="/new" component={CreateRecipe} />
-            <Route
-              path="/delete"
-              render={(routerProps) => {
-                return <DeleteRecipe {...routerProps} data={this.state.data} />;
-              }}
-            />
             <Route
               path="/update"
               render={(routerProps) => {
