@@ -105,7 +105,6 @@ class RecipeTile extends Component {
         if (res.data != null) {
           console.log(this.props.history);
           this.props.history.push("/success");
-          window.location.reload(false);
           console.log(res.data);
         } else if (res.data == null) {
           this.props.history.push("/fail");
