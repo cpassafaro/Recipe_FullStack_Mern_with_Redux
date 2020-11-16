@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { withStyles } from '@material-ui/core/styles';
 import { Button, Typography, Container, TextField, CircularProgress } from "@material-ui/core";
+import {withRouter} from 'react-router-dom'
 
 
 const styles = theme => ({
@@ -92,7 +93,7 @@ class Update extends Component {
       .then((res) => {
         if(res.data != null){
           console.log(this.props.history)
-          this.props.history.push('/success')
+          this.props.history.push({pathname:'/success'})
           window.location.reload(false)
         console.log(res.data);
         }else if(res.data == null){
@@ -184,4 +185,4 @@ class Update extends Component {
   }}
 }
 
-export default withStyles(styles) (Update)
+export default withStyles(styles) (withRouter(Update))
