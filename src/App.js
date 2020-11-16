@@ -11,7 +11,7 @@ import "./App.css";
 import { CircularProgress } from "@material-ui/core/";
 import { Route, Link} from "react-router-dom";
 let urlRoot = window.location.host.includes('localhost') ? "" : "/front_end_of_json_api_project" 
-
+console.log(urlRoot, 'this is what the root path should be')
 class App extends Component {
   constructor() {
     super();
