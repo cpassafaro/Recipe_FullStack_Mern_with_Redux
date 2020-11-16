@@ -9,7 +9,7 @@ import Success from './status/Success';
 import Fail from './status/Fail';
 import "./App.css";
 import { CircularProgress } from "@material-ui/core/";
-import { Route, Link, Redirect } from "react-router-dom";
+import { Route, Link} from "react-router-dom";
 
 class App extends Component {
   constructor() {
@@ -72,8 +72,7 @@ class App extends Component {
             />
             <Route
               path="/recipe/:title" component={RecipeTile}/>
-              <Route
-              path="/success" component={Success}/>
+              <Route path="/success" component={Success}/>
               <Route path="/fail" component={Fail}/>
           </main>
         </div>
