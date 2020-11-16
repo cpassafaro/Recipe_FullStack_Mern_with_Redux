@@ -2,7 +2,8 @@
   "name": "front-end-of-json-api-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cpassafaro.github.io/front_end_of_json_api_project/",
+  "homepage": "https://cpassafaro.github.io/front_end_of_json_api_project",
+  
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
