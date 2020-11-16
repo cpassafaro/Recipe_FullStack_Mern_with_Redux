@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { withStyles } from '@material-ui/core/styles';
 import { Button, Typography, Container, TextField, CircularProgress } from "@material-ui/core";
 
+const styles = theme => ({
+  root: {
+    maxWidth: 345,
+  },
+  tall: {
+    // height: 0,
+  },
+});
 
 
 
-export default class Update extends Component {
+class Update extends Component {
   constructor(props) {
     super(props);
     console.log(props.location.params.data)
@@ -120,7 +129,7 @@ export default class Update extends Component {
   
 
   render() {
-
+    const {classes} = this.props;
     if (this.state.isLoading == true) {
       return (
         <CircularProgress
@@ -136,6 +145,7 @@ export default class Update extends Component {
         <Typography style={{color:'secondary', display: 'flex', flexDirection:'column'}}>
           <div>You are making changes to : {this.state.title}</div> 
           <TextField
+            multiline={true}
             value={this.state.servings}
             type="text"
             placeholder="Summary"
@@ -143,6 +153,7 @@ export default class Update extends Component {
             onChange={this.pushServingsToState}
           />
           <TextField
+            className={classes.tall}
             value={this.state.ingredients}
             type="text"
             variant="outlined"
@@ -169,3 +180,5 @@ export default class Update extends Component {
     );
   }}
 }
+
+export default withStyles(styles) (Update)

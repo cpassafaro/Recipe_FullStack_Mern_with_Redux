@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { withStyles } from '@material-ui/core/styles';
 import { Route, Link, Redirect } from "react-router-dom";
+import {TextField} from "@material-ui/core";
 import "./RecipeTile.css";
 
 class RecipeTile extends Component {
