@@ -7,9 +7,10 @@ import {
 } from "react-router-dom";
 import { ThemeProvider} from '@material-ui/core/styles';
 import Theme from './Theme'
+let urlRoot = window.location.host.includes('localhost') ? "/" : "/front_end_of_json_api_project" 
 
 ReactDOM.render(
-  <Router>
+  <Router basename={urlRoot}>
     <ThemeProvider theme={Theme}>
       <App />
     </ThemeProvider>
