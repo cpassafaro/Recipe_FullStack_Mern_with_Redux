@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Route, Link, Redirect } from "react-router-dom";
 import {TextField} from "@material-ui/core";
 import "./RecipeTile.css";
-let urlRoot = window.location.host.includes('localhost') ? "" : "/front_end_of_json_api_project" 
+
 
 class RecipeTile extends Component {
   constructor(props) {
@@ -90,7 +90,7 @@ class RecipeTile extends Component {
         </div>
       );
       emptyArr.push(element1);
-      // console.log(emptyArr);
+
     });
     this.setState({ elements: emptyArr });
   };
@@ -104,13 +104,13 @@ class RecipeTile extends Component {
         //could do it by status because even if title doesn't exist but api call is good it would show success
         if (res.data != null) {
           console.log(this.props.history);
-          this.props.history.push(urlRoot + "/success");
+          this.props.history.push("/success");
           window.location.reload(false);
           console.log(res.data);
         } else if (res.data == null) {
-          this.props.history.push(urlRoot + "/fail");
+          this.props.history.push("/fail");
         } else {
-          this.props.history.push(urlRoot + "/fail");
+          this.props.history.push("/fail");
         }
       });
   };

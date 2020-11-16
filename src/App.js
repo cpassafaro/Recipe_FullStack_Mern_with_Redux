@@ -10,8 +10,8 @@ import Fail from './status/Fail';
 import "./App.css";
 import { CircularProgress } from "@material-ui/core/";
 import { Route, Link} from "react-router-dom";
-let urlRoot = window.location.host.includes('localhost') ? "" : "/front_end_of_json_api_project" 
-console.log(urlRoot, 'this is what the root path should be')
+
+
 class App extends Component {
   constructor() {
     super();
@@ -48,33 +48,33 @@ class App extends Component {
       return (
         <div>
           <nav>
-            <Link exact to={urlRoot + "/"}></Link>
-            <Link to={urlRoot + "/new"}></Link>
-            <Link to={urlRoot + "/delete"}></Link>
-            <Link to={urlRoot + "/update"}></Link>
+            <Link exact to="/"></Link>
+            <Link to="/new"></Link>
+            <Link to="/delete"></Link>
+            <Link to="/update"></Link>
           </nav>
           <main>
             <Header />
             {/* <Home data={this.state.data}/> */}
             <Route
               exact
-              path={urlRoot + "/"}
+              path="/"
               render={(routerProps) => {
                 return <Home {...routerProps} data={this.state.data} />;
               }}
             />
             {/* Route to make a new element, component will pass down props automatically */}
-            <Route path={urlRoot + "/new"} component={CreateRecipe} />
+            <Route path="/new" component={CreateRecipe} />
             <Route
-              path={urlRoot + "/update"}
+              path="/update"
               render={(routerProps) => {
                 return <Update {...routerProps} />;
               }}
             />
             <Route
-              path={urlRoot + "/recipe/:title"} component={RecipeTile}/>
-              <Route path={urlRoot + "/success"} component={Success}/>
-              <Route path={urlRoot + "/fail"} component={Fail}/>
+              path="/recipe/:title" component={RecipeTile}/>
+              <Route path="/success" component={Success}/>
+              <Route path="/fail" component={Fail}/>
           </main>
         </div>
       );
