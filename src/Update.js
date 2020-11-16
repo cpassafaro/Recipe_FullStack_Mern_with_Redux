@@ -93,7 +93,7 @@ class Update extends Component {
       .then((res) => {
         if(res.data != null){
           console.log(this.props.history)
-          this.props.history.push({pathname:'/success'})
+          this.props.history.push('/new')
           window.location.reload(false)
         console.log(res.data);
         }else if(res.data == null){
