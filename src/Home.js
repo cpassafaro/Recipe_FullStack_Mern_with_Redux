@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import axios from 'axios'
 import { Typography, Grid } from "@material-ui/core/";
+import { CircularProgress } from "@material-ui/core/";
 import Card from "./CardPage";
 ///coment
 
@@ -27,16 +29,33 @@ export default class Home extends Component {
       mexican: "",
       middleEastern: "",
       isLoading: true,
+      // refreshData: ''
     };
   }
 
-  componentDidMount() {
-    this.setState({ isLoading: false });
-    this.findAmerican();
+  getData = () => {
+    let url = "https://bombrecipeapi.herokuapp.com/";
+    axios
+      .get(url)
+      .then((res) => {
+        return res;
+      })
+      .then((recipes) => {
+        // this.setState({ data: recipes.data});
+        this.findAmerican(recipes)
+      });
   }
 
-  findAmerican = () => {
-    let arr = this.state.data;
+  componentDidMount() {
+    this.getData()
+    // this.findAmerican();
+    // this.setState({ isLoading: false });
+
+  }
+
+  findAmerican = (recipes) => {
+    console.log(recipes.data)
+    let arr = recipes.data;
     let holder = [];
     let french = [];
     let italian = [];
@@ -249,12 +268,13 @@ export default class Home extends Component {
       japanese: japanese,
       mexican: mexican,
       middleEastern: middleEastern,
+      isLoading:false,
     });
   };
 
   render() {
     if (this.state.isLoading == true) {
-      return <div className="App">Loading...</div>;
+      return <CircularProgress color='secondary'/>;
     } else {
       return (
         <Typography>

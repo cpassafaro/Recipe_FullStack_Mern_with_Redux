@@ -19,6 +19,7 @@ class App extends Component {
     this.state = {
       data: "",
       isLoading: true,
+      shouldRender: true,
     };
   }
   componentDidMount() {
