@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { withStyles } from '@material-ui/core/styles';
 import { Button, Typography, Container, TextField, CircularProgress } from "@material-ui/core";
+let urlRoot = window.location.host.includes('localhost') ? "" : "/front_end_of_json_api_project" 
 
 const styles = theme => ({
   root: {
@@ -11,6 +12,8 @@ const styles = theme => ({
     // height: 0,
   },
 });
+
+
 
 
 
@@ -89,13 +92,13 @@ class Update extends Component {
       .then((res) => {
         if(res.data != null){
           console.log(this.props.history)
-          this.props.history.push('/success')
+          this.props.history.push(urlRoot + '/success')
           window.location.reload(false)
         console.log(res.data);
         }else if(res.data == null){
-          this.props.history.push('/fail')
+          this.props.history.push(urlRoot + '/fail')
         }else{
-          this.props.history.push('/fail')
+          this.props.history.push(urlRoot + '/fail')
         }
       });
   };
