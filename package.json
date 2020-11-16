@@ -2,7 +2,7 @@
   "name": "front-end-of-json-api-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://christinasbombrecipes/",
+
   
   "dependencies": {
     "@material-ui/core": "^4.11.0",
