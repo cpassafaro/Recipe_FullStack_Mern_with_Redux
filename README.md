@@ -1,4 +1,4 @@
-# Front End of JSON API Project
+# Front End of JSON API Project(UNDER CONSTRUCTION || CHANGING OVER RECIPE PROJECT TO INCLUDE REDUX)
 _______________________
 
 ## Deployed URL
